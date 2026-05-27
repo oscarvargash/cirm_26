@@ -1,21 +1,11 @@
-# Day one, Morning, Navigating the system
+# Day one, afternoon, Navigating the system
 
 > Add the flag to the corner of your screen ![](img/yellow.jpeg)
 
 ## Before start
 
 To start this tutorial you need to be logged in the Linux virtual machine
-[vlinux.humboldt.edu](https://vlinux.humboldt.edu/) please use your Cal Poly Humboldt credentials
-
-
-- log-in with your credentials
-
-- Change the remote desktop to fit into the window (for best visualization experience)
-
-- Click on "Crete a new virtual desktop"
-
-The virtual machine is a virtual Linux computer runing in a server through the PC you are using. Linux based systems are typically used in bioinformatic environments, hence the importance of getting familiarized with them.
-
+[vlinux.humboldt.edu](https://vlinux.humboldt.edu/)
 
 ### Open terminal
 
@@ -26,8 +16,6 @@ You can also write 'terminal' in the search bar of the main manu located in the 
 ![](img/terminal.png)
 
 > Note: Macs also have a linux based Terminal. Go to: Applications > Utilities > Terminal.app or you can search in Spotlight: search write `terminal` and press <kbd>Return</kbd>.
-
-> Note for Windows users: you can install linux in your computer installing a virtual in your computer [installing a virtual machine](https://github.com/merlyescalona/ucsc-eeb-intro2comptools/tree/master/week_00#using-a-virtual-machine) for set up.
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
 
@@ -150,27 +138,10 @@ Let's move into the Documents folder:
 cd Documents
 ```
 
-Let's create a directory to keep our files organized
+To create a new directory labeled `week_01` type:
 
 ```
-mkdir day 1
-```
-What happened?
-
-The command line interprets `day` and `1` as different arguments.
-
-***From now on avoid using spaces in file and folder names, use _ instead***
-
-We can remove both unwanted directories by typing 
-
-```
-rmdir day 1 
-```
-
-Now, let's create a new directory labeled `day_01` by typing:
-
-```
-mkdir day_01
+mkdir week_01
 ```
 
 List the items inside your working directory and confirm the folder has been created
@@ -182,7 +153,7 @@ ls
 To Change Directories into the newly created folder type:
 
 ```
-cd day_01
+cd week_01
 ```
 
 you can check that you are really there by checking your Present Working Directory `pwd`
@@ -201,11 +172,28 @@ cd
 ***TIP:*** When the terminal is ready to recibe your command, you can go back earlier commands by simply pressing the up arrow key <kbd>↑</kbd>
 
 
-***TIP:*** To change directories type `cd ` and then **drag and drop** the folder you want to go. This will reduce the ammount of typing if the desired folder you wat to relocate to is too nested in the file hierarchy. let's drag and drop the folder `day_01` in after typing `cd `, then press <kbd>enter</kbd>
+***TIP:*** To change directories type `cd ` and then **drag and drop** the folder you want to go. This will reduce the ammount of typing if the desired folder you wat to relocate to is too nested in the file hierarchy. let's drag and drop the folder `week_01` in after typing `cd `, then press <kbd>enter</kbd>
 
 You can see that the drag and drop method adds the absolute path of the folder instead of the relative path.
 
-> Remove your flag if you are good to continue ![](img/green.jpeg)
+You can infer, from the way the command line works, that spaces inside folder and file names can be problematic. For example, let's see what thappens when we try to create a folder "test 1" inside `week_01`
+
+```
+mkdir test 1
+```
+What happened?
+
+The command line interprets `test` and `1` as different arguments.
+
+***From now on avoid using spaces in file and folder names, use _ instead***
+
+We can remove both unwanted directories by typing 
+
+```
+rmdir 1 test 
+```
+
+> Remove your flag if you are good to continue![](img/green.jpeg)
 
 ### Creating and managing files
 
@@ -214,16 +202,13 @@ You can see that the drag and drop method adds the absolute path of the folder i
 A practical way to create a file is to use the text editor `nano`. Let's create a new file by typing:
 
 ```
-cd ~/Documents/day_01
-nano log.txt
+nano personal_log_1.txt
 ```
 
 After excecuting the command nano will open and you can start adding text to your new file, let's type:
 
 ```
 I love coding
-
-at Cal Poly Humboldt
 ```
 
 Notice that at the bottom of the window, there are commands instructions. To exit and save press:
@@ -238,87 +223,68 @@ Finally press:
 
 <kbd>return</kbd>
 
+
 If you `ls` your new file should appear there. We can print the contect of a file to the screen easily by typing:
 
 ```
-cat log.txt
+cat personal_log_1.txt
 ```
 
-`cat` is an useful program taht can be use to print the contents of any file to the screen. It can also be used to concatenate files.
+***TIP:*** When typing file and folder names you can press the `tab` key to autocomplete a name, notice that the letters typed have to be long enough to match only a single item. In this case just by typing `cat per` and then pressing `tab` we should be able to obtain the complete command desired.
 
-***TIP:*** When typing file and folder names you can press the `tab` key to autocomplete a name, notice that the letters typed have to be long enough to match only a single item. In this case just by typing `cat log` and then pressing <kbd>tab</kbd> we should be able to obtain the complete command desired.
 
-> Remove your flag if you are good to continue ![](img/green.jpeg)
-
-It turns out that we want `log.txt` inside a folder called `personal_entries`. First we need to create the directory by:
-
-> Add the flag to the corner of your screen ![](img/yellow.jpeg)
+It turns out that we want `personal_log_1.txt` inside a folder called `personal_entries`. First we need to create the directory by:
 
 ```
-mkdir personal
+mkdir personal_entries
 ```
 
 Now we need to move our text file inside the new folder, notice that the command works like this `mv path_origin path_destination`.
 
 ```
-mv log.txt personal/
+mv personal_log_1.txt personal_entries/
 ```
 
-Check the file was moved by listing the contents of `personal` typing:
+Check the file was moved by listing the contents of `personal_entries` typing:
 
 ```
-ls personal
+ls personal_entries
 ```
 
-`mv` can also be used to rename files, let's remane `log.txt` with `log_01.txt`
+`mv` can also be used to rename files, let's remane `personal_log_1.txt` with `personal_log_001.txt`
 
 ```
-cd personal
-mv log.txt log_01.txt
+cd personal_entries
+mv personal_log_1.txt personal_log_001.txt
 ```
 
-Finally we can make a copy of `log_01.txt` to create a second file:
+Finally we can make a copy of `personal_log_001.txt` to create a second file:
 
 ```
-cp log_01.txt log_02.r
+cp personal_log_001.txt personal_log_002.r
 ```
 
 we can check the contents of the copied file:
 
 ```
-cat log_02.r
+cat personal_log_002.r
 ```
 
 Notice that regarding the extension of the file `.txt` / `.r` cat prints the contents of the file to the screen.
 
-> Remove your flag if you are good to continue ![](img/green.jpeg)
-
-
-## Cancel a running process
-
-> Add the flag to the corner of your screen ![](img/yellow.jpeg)
-
-Sometimes an unwanted process happens in our terminal, perhaps we `cat` a really long file or we just insert a typo in the command line. We can simulate an unwanted process by just typing:
-
-```
-cat
-```
-
-You might think that the terminal is stuck, that we might have missed and argument for `cat`, but `cat`  is operating nevertheless. We can easily cancel the process by typing:
-
-<kbd>control</kbd> + <kbd>c</kbd>
-
-The process is canceled and the terminal is ready to receive a command.
+> Remove your flag if you are good to continue![](img/green.jpeg)
 
 ### Using wild cards
 
-In cases where directories contain thousands of files, it might not be practical to list all contents. Instead we can use wildcards `*` to list only files of interest.
+> Add the flag to the corner of your screen ![](img/yellow.jpeg)
 
-Let's make sure wer have a good number of files to perform the next exercise, make sure you are inside `day_01`. We are going to create 4 emtu files using the command `touch`
+In cases where directories contain thousands of files, it might not be practical to list all contents. Instead we can use wildcards * to list only files of interest.
+
+Let's make sure wer have a good number of files to perform the next exercise, make sure you are inside `week_01`. We are going to create 4 emtu files using the command 'touch'
 
 ```
-cd ~/Documents/day_01
-touch log_1.txt log_2.txt script_1.r script_2.r
+cd week_01
+touch log_01.txt log_02.txt script_01.r script_02.r
 ```
 
 We can list only files that end with ".txt"
@@ -326,7 +292,8 @@ We can list only files that end with ".txt"
 ```
 ls *.txt
 ```
-How can we list only the files that end with `.r` ?
+
+How can we list only the files that end with ".r" ?
 
 <details>
   <summary>Click to see an answer!</summary>
@@ -337,16 +304,16 @@ ls *.r
 
 </details>
 
-Wild cards can also be used for the begining of files and for strings nested in the name of the files. For example we can list only files that start with `log`:
+Wild cards can also use for the beguining of files and for strings nested in the name of the files. For example we can list only files that start with "personal":
 
 ```
 ls log*
 ```
 
-And we can list the files that contain the string `2.`:
+And we can list the files that contain the string "002":
 
 ```
-ls *2.*
+ls *02*
 ```
 
 ### Removing files
@@ -354,40 +321,30 @@ ls *2.*
 With great power comes great resposability! Files removed through the terminal are gone forever, they **DON'T** go to a trash bin from where they can be reinstated. You can remove a file just by typing:
 
 ```
-rm log_1.txt
+rm log_01.txt
 ```
 
-You can remove all the `.r` files:
+You can remove all the `.txt` files:
 
 ```
-rm *.r
+rm *.txt
 ```
 
 ***EXTREME CAUTION `rm *` will remove ALL the files inside the directory forever!***
 
-> Remove your flag if you are good to continue ![](img/green.jpeg)
+> Remove your flag if you are good to continue![](img/green.jpeg)
 
-
-# Day one, managing files and using programs
-
-To start this tutorial you need to be logged in the Linux virtual machine
-[vlinux.humboldt.edu](https://vlinux.humboldt.edu/)
-
-Once logged in the Linux machine, look for the Terminal, it is an icon that contains the characters '>\_'
-
-You can also write 'terminal' in the search bar of the main manu located in the left bottom of the operating system.
-
-## Using programs
+### Using cat
 
 > Add the flag to the corner of your screen ![](img/yellow.jpeg)
 
 The terminal is a powerful to run programs, as you can analyze tons of data with only a single command. In this tutorial we will run several aplpications in the terminal and will learn the principles of automatizing data processing.
 
-Please download in your machine a compressed file with the data in the folder named `day_01`:
+Please download in your machine a compressed file with the data in the folder named `week_01`:
 
 ```
-cd ~Documents/day_01
-wget https://github.com/oscarvargash/cirm_25/raw/main/day_1/files/files.zip
+cd ~Documents/week_01
+wget https://github.com/oscarvargash/cirm_26/raw/main/day_01/files/files.zip
 ```
 
 As you can see, this is a compressed file. We can decompressed by
@@ -458,7 +415,7 @@ The following line of code is then able to count the number of `@` in our file, 
 grep -c "@" L008_R1.fastq
 ```
 
-## Exercise 1 
+##  Final Exercise
 
 How many sequences are found in the other three sequence files?
 Add these numbers to a text file in your folder using `nano`
@@ -473,46 +430,8 @@ Check with your instructor or teaching assistant before going further
 > Remove your flag if you are good to continue ![](img/green.jpeg)
 
 
-## Using FastQC
-
-We can use FastQC to evaluate the quality of the file. First let's figure out how does FastQC works. Most programs have a help menu.
-
-> Add the flag to the corner of your screen ![](img/yellow.jpeg)
-
-```
-fastqc -help
-``` 
-
-It seems that we can simply add the name of the file as as the first argument, and we then add `-o` (output) to specify where the program should write the report. Recall that `.` indicates current directory.
-
-```
-fastqc L008_R1.fastq -o .
-``` 
-
-Once it has finish you can list all files and see the output.
-
-```
-ls
-```
-
-You can navigate with the mouse and open the html report in a web navigator
-
-Congrats!!! you have executed a program succesfully
-
-### Exercise 2
-
-Analyze the remaning files (protip: you can analyze all 4 files using a single line of code if you use a wildcard).
-
-Do the sequence numbers match your calculations with grep?
-
-> Remove your flag if you are good to continue ![](img/green.jpeg)
-
-Congrats, you have succesfully finish the introduction to bash tutorial !!!!!
-Here is a great resource for the future:
-
-### ADD EXERCISE WITH PYTHON SCRIPT #####
-
 
 ### Cheat sheet of linux commands
 
-There are a many commands that we did not cover in this initial tutorial. You can search for basic linux commands in google for aditional ones. A good set of commands can be [consulted here](https://www.hostinger.com/tutorials/linux-commands)
+There are a many commands that we did not cover in this initial tutorial. You can search for basic linux commands in google for aditional ones. A good set of commands can be [downloaded here](https://arefiles.ucdavis.edu/uploads/filer_public/ce/8d/ce8d7cfa-2205-406d-90c6-aa0037086d25/useful_linux_commands.pdf)
+
