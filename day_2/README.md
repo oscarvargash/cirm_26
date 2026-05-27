@@ -106,7 +106,6 @@ Edited by: CCG and OMV 2022
 * Load  data in R from external tools
 
 What you should have at the end of this tutorial
-* A word document with answers to Tasks1-10.
 * A script document with the code you produced in this tutorial.
 * A basic understanding of how to run basic R code and obtain results.
 
@@ -178,10 +177,6 @@ Open the R program by double clicking on the R icon. Under the opening message, 
 ```
 
 The usual precedence for mathematical operators is followed (multiplication and division first, then addition and subtraction). In general, R ignores spaces and so they are not necessary, but for bigger expressions spaces may improve the readability.
- 
-### Task 2
-In these tutorials, you will regularly find tasks interspersed with guidelines and code. In these tasks, you have to use the code you learned to complete some challenge, then upload a document with the results from each task (see provided example). Task 1 consists of doing simple calculations in R. In the document you turn in, show your code and the answer for each one.
-Example:
 
 ```
 455*544
@@ -219,7 +214,7 @@ seq(0, 1, length=11)
 
 To obtain help or additional info on a function, type ? before the function name or help(function name) and press Enter. (Note: the function log returns the natural log).
  
-### Task 3
+### Task
 Explore the functions seq and rep. Use the help to find more about them. Explain what they do in your own words and show an example for each (code and output).
  
 ## Data types and data structures
@@ -332,17 +327,6 @@ Practice your skills with variables and vectors! For each of the following items
 4. Use the function var to return the variances of the two variables
 5. The function “plot” will create a separate window on your screen with a standard
 labeled plot. Type plot(variable) to create a scatter plot of your variables against their indices, substituting your variable name into the brackets, and also plot(variable1, variable2) to plot your variables against each other. Paste your plot to the document you turn in.
-
-### Task 
-To explore the different types of elements in R, you will explore some functions on your own. Feel free to google and talk to your peers to complete this task. Make sure you understand the main difference between the classes and functions mentioned here. In your own words explain what these functions do:
-is.character()
-as.character()
-is.numeric()
-as.numeric()
-is.logical()
-as.logical()
-class()
-Test them on the variables you have created so far: Vector1, Vector2, this.is.a.variable.containing.log.values.for.vector1, list_data. What types of elements have you worked with so far? 
 
 ## This is the end of the morning activity
 Good job! You have completed the first session of our Bioinformatics Workshop. We will be meeting again for the afternoon session. **Make sure you save your files to the cloud (they will be deleted from vlab once you log out!)**. You can also directly submit to Canvas if you have completed all the work. See you soon!
