@@ -138,10 +138,10 @@ Let's move into the Documents folder:
 cd Documents
 ```
 
-To create a new directory labeled `week_01` type:
+To create a new directory labeled `day_1` type:
 
 ```
-mkdir week_01
+mkdir day_1
 ```
 
 List the items inside your working directory and confirm the folder has been created
@@ -153,7 +153,7 @@ ls
 To Change Directories into the newly created folder type:
 
 ```
-cd week_01
+cd day_1
 ```
 
 you can check that you are really there by checking your Present Working Directory `pwd`
@@ -172,11 +172,11 @@ cd
 ***TIP:*** When the terminal is ready to recibe your command, you can go back earlier commands by simply pressing the up arrow key <kbd>↑</kbd>
 
 
-***TIP:*** To change directories type `cd ` and then **drag and drop** the folder you want to go. This will reduce the ammount of typing if the desired folder you wat to relocate to is too nested in the file hierarchy. let's drag and drop the folder `week_01` in after typing `cd `, then press <kbd>enter</kbd>
+***TIP:*** To change directories type `cd ` and then **drag and drop** the folder you want to go. This will reduce the ammount of typing if the desired folder you wat to relocate to is too nested in the file hierarchy. let's drag and drop the folder `day_1` in after typing `cd `, then press <kbd>enter</kbd>
 
 You can see that the drag and drop method adds the absolute path of the folder instead of the relative path.
 
-You can infer, from the way the command line works, that spaces inside folder and file names can be problematic. For example, let's see what thappens when we try to create a folder "test 1" inside `week_01`
+You can infer, from the way the command line works, that spaces inside folder and file names can be problematic. For example, let's see what thappens when we try to create a folder "test 1" inside `day_1`
 
 ```
 mkdir test 1
@@ -280,10 +280,10 @@ Notice that regarding the extension of the file `.txt` / `.r` cat prints the con
 
 In cases where directories contain thousands of files, it might not be practical to list all contents. Instead we can use wildcards * to list only files of interest.
 
-Let's make sure wer have a good number of files to perform the next exercise, make sure you are inside `week_01`. We are going to create 4 emtu files using the command 'touch'
+Let's make sure wer have a good number of files to perform the next exercise, make sure you are inside `day_1`. We are going to create 4 emtu files using the command 'touch'
 
 ```
-cd week_01
+cd day_1
 touch log_01.txt log_02.txt script_01.r script_02.r
 ```
 
@@ -340,11 +340,11 @@ rm *.txt
 
 The terminal is a powerful to run programs, as you can analyze tons of data with only a single command. In this tutorial we will run several aplpications in the terminal and will learn the principles of automatizing data processing.
 
-Please download in your machine a compressed file with the data in the folder named `week_01`:
+Please download in your machine a compressed file with the data in the folder named `day_1`:
 
 ```
-cd ~Documents/week_01
-wget https://github.com/oscarvargash/cirm_26/raw/main/day_01/files/files.zip
+cd ~Documents/day_1
+wget https://github.com/oscarvargash/cirm_26/raw/main/day_1/files/files.zip
 ```
 
 As you can see, this is a compressed file. We can decompressed by
