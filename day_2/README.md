@@ -556,23 +556,28 @@ abline(model1)
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
 
+## Exercise: plotting
+Pick a different species than Abronia latifolia and: 
+1. make a graph of latitude vs longitude for such species
+2. Calculate average latitude and longitude such species
+3. Caculate minimum and maximum latidudes for this species 
+Submit your results to canvas
+
 ## Exercise: advance plotting
 
 Ggplot can create advance figures. Install ggplot and plot the latitude of all species in a single figure color-coded by species. Adapt the following code to our data:
 
 https://ggplot2.tidyverse.org/
 
+Submit your results to canvas
+
 <details>
   <summary>Click to see an answer!</summary>
   
 ```
-install.packages("tidyverse")
-install.packages("ggplot2")
-library(ggplot2)
-
 ggplot(geodata, aes(decimalLongitude, decimalLatitude, colour = species)) + geom_point()
 
 ```
- 
+
 
 

@@ -1,0 +1,3 @@
+# day 1 add the excersie to make it complete
+# day 2 was a little short, we could have added another exercise for importing data
+# day 3
