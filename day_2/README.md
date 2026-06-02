@@ -558,9 +558,10 @@ abline(model1)
 
 ## Exercise: plotting
 Pick a different species than Abronia latifolia and: 
-1. make a graph of latitude vs longitude for such species
+1. Make a graph of latitude vs longitude for such species
 2. Calculate average latitude and longitude such species
-3. Caculate minimum and maximum latidudes for this species 
+3. Calculate minimum and maximum from latitude and longitude 
+
 Submit your results to canvas
 
 ## Exercise: advance plotting
@@ -575,6 +576,8 @@ Submit your results to canvas
   <summary>Click to see an answer!</summary>
   
 ```
+library(ggplot2)
+
 ggplot(geodata, aes(decimalLongitude, decimalLatitude, colour = species)) + geom_point()
 
 ```
