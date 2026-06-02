@@ -556,7 +556,7 @@ abline(model1)
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
 
-## Optional Exercise: advance plotting
+## Exercise: advance plotting
 
 Ggplot can create advance figures. Install ggplot and plot the latitude of all species in a single figure color-coded by species. Adapt the following code to our data:
 
