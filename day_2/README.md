@@ -566,7 +566,7 @@ Submit your results to canvas
 
 ## Exercise: advance plotting
 
-Ggplot can create advance figures. Install ggplot and plot the latitude of all species in a single figure color-coded by species. Adapt the following code to our data:
+Ggplot can create advance figures. Install ggplot and plot the latitude and longitude of all species in a single figure color-coded by species. Adapt the following code to our data:
 
 https://ggplot2.tidyverse.org/
 
